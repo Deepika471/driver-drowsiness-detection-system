@@ -1,0 +1,9 @@
+express
+dotenv
+multer
+axios
+form-data
+cors
+mongoose
+jsonwebtoken
+bcryptjs

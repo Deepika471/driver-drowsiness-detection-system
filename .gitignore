@@ -1,0 +1,14 @@
+node_modules
+.env
+uploads
+dist
+build
+__pycache__
+*.pyc
+venv
+.env.local
+
+backend/dataset_small/
+
+*.ipynb
+.ipynb_checkpoints/
