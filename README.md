@@ -1,5 +1,6 @@
 ## Tech Stack
-- React
+- Python
+- React + Vite
 - Node.js
 - Express.js
 - MongoDB Atlas
@@ -13,8 +14,7 @@
 - JWT Protected Routes
 
 ## Datasets Used
-- NTHU Dataset
-- UTA-RLDD Dataset
+- NTHU Image Dataset
 
 # Driver Drowsiness Detection System
 
