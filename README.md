@@ -1,3 +1,21 @@
+## Tech Stack
+- React
+- Node.js
+- Express.js
+- MongoDB Atlas
+- TensorFlow/Keras
+- Flask
+
+## Features
+- User Authentication
+- Image-based Drowsiness Detection
+- MongoDB Prediction Storage
+- JWT Protected Routes
+
+## Datasets Used
+- NTHU Dataset
+- UTA-RLDD Dataset
+
 # Driver Drowsiness Detection System
 
 ## Home Page
