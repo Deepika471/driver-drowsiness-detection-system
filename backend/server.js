@@ -1,3 +1,4 @@
+// backend/server.js
 require("dotenv").config();
 
 const express = require("express");
@@ -10,6 +11,7 @@ const mongoose = require("mongoose");
 const authMiddleware = require("./middleware/authMiddleware");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
+const webcamRoutes = require("./routes/webcamRoutes");
 
 const app = express();
 
@@ -85,6 +87,7 @@ app.post("/api/auth/login", async (req, res) => {
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) return res.status(400).json({ message: "Invalid credentials" });
 
+    console.log("JWT SECRET:", process.env.JWT_SECRET);
     // ✅ FIX 4: was hardcoded "secretkey"
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: "7d" });
 
@@ -147,5 +150,7 @@ app.get("/api/predictions", authMiddleware, async (req, res) => {
     res.status(500).json({ message: "Failed to fetch predictions" });
   }
 });
+
+app.use("/api", webcamRoutes);
 
 app.listen(3000, () => console.log("🚀 Server running on port 3000"));
