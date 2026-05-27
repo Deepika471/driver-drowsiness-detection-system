@@ -12,3 +12,9 @@ backend/dataset_small/
 
 *.ipynb
 .ipynb_checkpoints/
+
+# Add these:
+best_model.h5
+*.h5
+frontend/node_modules
+backend/node_modules 
