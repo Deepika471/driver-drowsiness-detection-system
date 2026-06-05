@@ -62,6 +62,7 @@ router.post("/detect-frame", authMiddleware, async (req, res) => {
 // Saves a single record — no Flask call, data from frontend.
 // ─────────────────────────────────────────────────────────────
 router.post("/save-drowsy-event", authMiddleware, async (req, res) => {
+  console.log("📥 save-drowsy-event hit:", req.body);
   try {
     const { predicted_class, state, confidence, detectedBy } = req.body;
 
