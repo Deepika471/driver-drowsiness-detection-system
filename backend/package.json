@@ -1,15 +1,12 @@
 {
-  "name": "project",
+  "name": "ddds-backend",
   "version": "1.0.0",
+  "description": "Driver Drowsiness Detection System — Node.js/Express Backend",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "axios": "^1.15.2",
     "bcryptjs": "^3.0.3",
@@ -20,5 +17,8 @@
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.6.1",
     "multer": "^2.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }
